@@ -1,0 +1,122 @@
+[0.000000] (-) TimerEvent: {}
+[0.000242] (rm_decision_cpp) JobQueued: {'identifier': 'rm_decision_cpp', 'dependencies': OrderedDict()}
+[0.000286] (rm_decision_cpp) JobStarted: {'identifier': 'rm_decision_cpp'}
+[0.015822] (rm_decision_cpp) JobProgress: {'identifier': 'rm_decision_cpp', 'progress': 'cmake'}
+[0.017024] (rm_decision_cpp) Command: {'cmd': ['/usr/local/bin/cmake', '/home/neomelt/sentry_decision', '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/neomelt/sentry_decision/install/rm_decision_cpp'], 'cwd': '/home/neomelt/sentry_decision/build/rm_decision_cpp', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'USER': 'neomelt', 'LANGUAGE': 'en_US:en', 'LC_TIME': 'zh_CN.UTF-8', 'LESS_TERMCAP_ue': '\x1b[0m', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'GREP_COLOR': '37;45', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/neomelt', 'OLDPWD': '/home/neomelt/sentry_decision', 'CHROME_DESKTOP': 'code.desktop', 'LESS': '--ignore-case --jump-target=4 --LONG-PROMPT --no-init --quit-if-one-screen --RAW-CONTROL-CHARS', 'DESKTOP_SESSION': 'ubuntu', 'TERM_PROGRAM_VERSION': '1.107.1', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/code.desktop', 'GTK_MODULES': 'gail:atk-bridge', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'PAGER': 'less', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'zh_CN.UTF-8', 'MANAGERPID': '30602', 'GREP_COLORS': 'mt=37;45', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'SYSTEMD_EXEC_PID': '39144', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '45167', 'COLORTERM': 'truecolor', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'neomelt', '_': '/usr/bin/colcon', 'JOURNAL_STREAM': '9:226201', 'LESS_TERMCAP_us': '\x1b[1;32m', 'XDG_SESSION_CLASS': 'user', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'ROS_VERSION': '2', 'USERNAME': 'neomelt', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'PATH': '/home/neomelt/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/neomelt/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/opt/ros/jazzy/bin:/home/neomelt/.local/bin:/home/neomelt/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PAPERSIZE': 'a4', 'SESSION_MANAGER': 'local/neomelt-ThinkBook:@/tmp/.ICE-unix/39110,unix/neomelt-ThinkBook:/tmp/.ICE-unix/39110', 'INVOCATION_ID': '38dc6d472fcb4f3fa33c247663c651be', 'XDG_RUNTIME_DIR': '/run/user/1002', 'LC_ADDRESS': 'zh_CN.UTF-8', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'GDK_BACKEND': 'wayland', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XMODIFIERS': '@im=ibus', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.1HESH3', 'LS_COLORS': 'di=1;34:ln=35:so=32:pi=33:ex=31:bd=1;36:cd=1;33:su=30;41:sg=30;46:tw=30;42:ow=30;43', 'TERM_PROGRAM': 'vscode', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-b03cda7626.sock', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/usr/bin/zsh', 'LC_NAME': 'zh_CN.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LC_MEASUREMENT': 'zh_CN.UTF-8', 'LESS_TERMCAP_mb': '\x1b[1;31m', 'LC_IDENTIFICATION': 'zh_CN.UTF-8', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'LESS_TERMCAP_md': '\x1b[1;31m', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'VSCODE_NONCE': '9ee92621-49d8-464d-9865-5e449b1cbfb4', 'PWD': '/home/neomelt/sentry_decision/build/rm_decision_cpp', 'LESS_TERMCAP_me': '\x1b[0m', 'LC_ALL': 'en_US.UTF-8', 'LC_NUMERIC': 'zh_CN.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_PAPER': 'zh_CN.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.098654] (-) TimerEvent: {}
+[0.167798] (rm_decision_cpp) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.198852] (-) TimerEvent: {}
+[0.299380] (-) TimerEvent: {}
+[0.314180] (rm_decision_cpp) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.348714] (rm_decision_cpp) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.399601] (-) TimerEvent: {}
+[0.475419] (rm_decision_cpp) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.490402] (rm_decision_cpp) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.491067] (rm_decision_cpp) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.491877] (rm_decision_cpp) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.499716] (-) TimerEvent: {}
+[0.511559] (rm_decision_cpp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.599914] (-) TimerEvent: {}
+[0.644174] (rm_decision_cpp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.660105] (rm_decision_cpp) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.660587] (rm_decision_cpp) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.661518] (rm_decision_cpp) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.674426] (rm_decision_cpp) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.700210] (-) TimerEvent: {}
+[0.800781] (-) TimerEvent: {}
+[0.901267] (-) TimerEvent: {}
+[0.959296] (rm_decision_cpp) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[1.001433] (-) TimerEvent: {}
+[1.089731] (rm_decision_cpp) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.101580] (-) TimerEvent: {}
+[1.154605] (rm_decision_cpp) StdoutLine: {'line': b'-- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[1.201764] (-) TimerEvent: {}
+[1.239113] (rm_decision_cpp) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[1.264836] (rm_decision_cpp) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[1.301627] (rm_decision_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.302016] (-) TimerEvent: {}
+[1.343579] (rm_decision_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.402207] (-) TimerEvent: {}
+[1.466008] (rm_decision_cpp) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[1.469086] (rm_decision_cpp) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 2.2.3 (/opt/ros/jazzy/share/rmw_cyclonedds_cpp/cmake)\n'}
+[1.499029] (rm_decision_cpp) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[1.502285] (-) TimerEvent: {}
+[1.564477] (rm_decision_cpp) StdoutLine: {'line': b'-- Found rclcpp_components: 28.1.13 (/opt/ros/jazzy/share/rclcpp_components/cmake)\n'}
+[1.600161] (rm_decision_cpp) StdoutLine: {'line': b'-- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)\n'}
+[1.602379] (-) TimerEvent: {}
+[1.634555] (rm_decision_cpp) StdoutLine: {'line': b'-- Found behaviortree_cpp: 4.7.1 (/opt/ros/jazzy/share/behaviortree_cpp/cmake)\n'}
+[1.638415] (rm_decision_cpp) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[1.662470] (rm_decision_cpp) StdoutLine: {'line': b'-- Found tf2: 0.36.16 (/opt/ros/jazzy/share/tf2/cmake)\n'}
+[1.667544] (rm_decision_cpp) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.36.16 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)\n'}
+[1.682197] (rm_decision_cpp) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)\n'}
+[1.683345] (rm_decision_cpp) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[1.683473] (rm_decision_cpp) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.702567] (-) TimerEvent: {}
+[1.769833] (rm_decision_cpp) StdoutLine: {'line': b'-- Found visualization_msgs: 5.3.6 (/opt/ros/jazzy/share/visualization_msgs/cmake)\n'}
+[1.802740] (-) TimerEvent: {}
+[1.883575] (rm_decision_cpp) StdoutLine: {'line': b'-- Configuring done (1.9s)\n'}
+[1.901195] (rm_decision_cpp) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.902824] (-) TimerEvent: {}
+[1.906010] (rm_decision_cpp) StdoutLine: {'line': b'-- Build files have been written to: /home/neomelt/sentry_decision/build/rm_decision_cpp\n'}
+[1.930648] (rm_decision_cpp) CommandEnded: {'returncode': 0}
+[1.931546] (rm_decision_cpp) JobProgress: {'identifier': 'rm_decision_cpp', 'progress': 'build'}
+[1.932395] (rm_decision_cpp) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/neomelt/sentry_decision/build/rm_decision_cpp', '--', '-j16', '-l16'], 'cwd': '/home/neomelt/sentry_decision/build/rm_decision_cpp', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'USER': 'neomelt', 'LANGUAGE': 'en_US:en', 'LC_TIME': 'zh_CN.UTF-8', 'LESS_TERMCAP_ue': '\x1b[0m', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'GREP_COLOR': '37;45', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/neomelt', 'OLDPWD': '/home/neomelt/sentry_decision', 'CHROME_DESKTOP': 'code.desktop', 'LESS': '--ignore-case --jump-target=4 --LONG-PROMPT --no-init --quit-if-one-screen --RAW-CONTROL-CHARS', 'DESKTOP_SESSION': 'ubuntu', 'TERM_PROGRAM_VERSION': '1.107.1', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/code.desktop', 'GTK_MODULES': 'gail:atk-bridge', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'PAGER': 'less', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'zh_CN.UTF-8', 'MANAGERPID': '30602', 'GREP_COLORS': 'mt=37;45', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'SYSTEMD_EXEC_PID': '39144', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '45167', 'COLORTERM': 'truecolor', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'neomelt', '_': '/usr/bin/colcon', 'JOURNAL_STREAM': '9:226201', 'LESS_TERMCAP_us': '\x1b[1;32m', 'XDG_SESSION_CLASS': 'user', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'ROS_VERSION': '2', 'USERNAME': 'neomelt', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'PATH': '/home/neomelt/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/neomelt/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/opt/ros/jazzy/bin:/home/neomelt/.local/bin:/home/neomelt/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PAPERSIZE': 'a4', 'SESSION_MANAGER': 'local/neomelt-ThinkBook:@/tmp/.ICE-unix/39110,unix/neomelt-ThinkBook:/tmp/.ICE-unix/39110', 'INVOCATION_ID': '38dc6d472fcb4f3fa33c247663c651be', 'XDG_RUNTIME_DIR': '/run/user/1002', 'LC_ADDRESS': 'zh_CN.UTF-8', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'GDK_BACKEND': 'wayland', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XMODIFIERS': '@im=ibus', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.1HESH3', 'LS_COLORS': 'di=1;34:ln=35:so=32:pi=33:ex=31:bd=1;36:cd=1;33:su=30;41:sg=30;46:tw=30;42:ow=30;43', 'TERM_PROGRAM': 'vscode', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-b03cda7626.sock', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/usr/bin/zsh', 'LC_NAME': 'zh_CN.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LC_MEASUREMENT': 'zh_CN.UTF-8', 'LESS_TERMCAP_mb': '\x1b[1;31m', 'LC_IDENTIFICATION': 'zh_CN.UTF-8', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'LESS_TERMCAP_md': '\x1b[1;31m', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'VSCODE_NONCE': '9ee92621-49d8-464d-9865-5e449b1cbfb4', 'PWD': '/home/neomelt/sentry_decision/build/rm_decision_cpp', 'LESS_TERMCAP_me': '\x1b[0m', 'LC_ALL': 'en_US.UTF-8', 'LC_NUMERIC': 'zh_CN.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_PAPER': 'zh_CN.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[1.958825] (rm_decision_cpp) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/tree_exec_node.dir/src/sentry_decision/main.cpp.o\x1b[0m\n'}
+[1.959099] (rm_decision_cpp) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/rm_decision_cpp.dir/src/sentry_decision/main.cpp.o\x1b[0m\n'}
+[2.002991] (-) TimerEvent: {}
+[2.103453] (-) TimerEvent: {}
+[2.203923] (-) TimerEvent: {}
+[2.304406] (-) TimerEvent: {}
+[2.404900] (-) TimerEvent: {}
+[2.505386] (-) TimerEvent: {}
+[2.605833] (-) TimerEvent: {}
+[2.706201] (-) TimerEvent: {}
+[2.806476] (-) TimerEvent: {}
+[2.906781] (-) TimerEvent: {}
+[3.007061] (-) TimerEvent: {}
+[3.107305] (-) TimerEvent: {}
+[3.207582] (-) TimerEvent: {}
+[3.307865] (-) TimerEvent: {}
+[3.408147] (-) TimerEvent: {}
+[3.508428] (-) TimerEvent: {}
+[3.608692] (-) TimerEvent: {}
+[3.708959] (-) TimerEvent: {}
+[3.809225] (-) TimerEvent: {}
+[3.909494] (-) TimerEvent: {}
+[4.009772] (-) TimerEvent: {}
+[4.110041] (-) TimerEvent: {}
+[4.210312] (-) TimerEvent: {}
+[4.310613] (-) TimerEvent: {}
+[4.317043] (rm_decision_cpp) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable tree_exec_node\x1b[0m\n'}
+[4.317283] (rm_decision_cpp) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library librm_decision_cpp.so\x1b[0m\n'}
+[4.410708] (-) TimerEvent: {}
+[4.466510] (rm_decision_cpp) StdoutLine: {'line': b'[100%] Built target rm_decision_cpp\n'}
+[4.477791] (rm_decision_cpp) StdoutLine: {'line': b'[100%] Built target tree_exec_node\n'}
+[4.482871] (rm_decision_cpp) CommandEnded: {'returncode': 0}
+[4.483374] (rm_decision_cpp) JobProgress: {'identifier': 'rm_decision_cpp', 'progress': 'install'}
+[4.485813] (rm_decision_cpp) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/neomelt/sentry_decision/build/rm_decision_cpp'], 'cwd': '/home/neomelt/sentry_decision/build/rm_decision_cpp', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'USER': 'neomelt', 'LANGUAGE': 'en_US:en', 'LC_TIME': 'zh_CN.UTF-8', 'LESS_TERMCAP_ue': '\x1b[0m', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'GREP_COLOR': '37;45', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/neomelt', 'OLDPWD': '/home/neomelt/sentry_decision', 'CHROME_DESKTOP': 'code.desktop', 'LESS': '--ignore-case --jump-target=4 --LONG-PROMPT --no-init --quit-if-one-screen --RAW-CONTROL-CHARS', 'DESKTOP_SESSION': 'ubuntu', 'TERM_PROGRAM_VERSION': '1.107.1', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/code.desktop', 'GTK_MODULES': 'gail:atk-bridge', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'PAGER': 'less', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'zh_CN.UTF-8', 'MANAGERPID': '30602', 'GREP_COLORS': 'mt=37;45', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'SYSTEMD_EXEC_PID': '39144', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '45167', 'COLORTERM': 'truecolor', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'neomelt', '_': '/usr/bin/colcon', 'JOURNAL_STREAM': '9:226201', 'LESS_TERMCAP_us': '\x1b[1;32m', 'XDG_SESSION_CLASS': 'user', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'ROS_VERSION': '2', 'USERNAME': 'neomelt', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'PATH': '/home/neomelt/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/neomelt/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/opt/ros/jazzy/bin:/home/neomelt/.local/bin:/home/neomelt/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PAPERSIZE': 'a4', 'SESSION_MANAGER': 'local/neomelt-ThinkBook:@/tmp/.ICE-unix/39110,unix/neomelt-ThinkBook:/tmp/.ICE-unix/39110', 'INVOCATION_ID': '38dc6d472fcb4f3fa33c247663c651be', 'XDG_RUNTIME_DIR': '/run/user/1002', 'LC_ADDRESS': 'zh_CN.UTF-8', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'GDK_BACKEND': 'wayland', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XMODIFIERS': '@im=ibus', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.1HESH3', 'LS_COLORS': 'di=1;34:ln=35:so=32:pi=33:ex=31:bd=1;36:cd=1;33:su=30;41:sg=30;46:tw=30;42:ow=30;43', 'TERM_PROGRAM': 'vscode', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-b03cda7626.sock', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/usr/bin/zsh', 'LC_NAME': 'zh_CN.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LC_MEASUREMENT': 'zh_CN.UTF-8', 'LESS_TERMCAP_mb': '\x1b[1;31m', 'LC_IDENTIFICATION': 'zh_CN.UTF-8', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'LESS_TERMCAP_md': '\x1b[1;31m', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'VSCODE_NONCE': '9ee92621-49d8-464d-9865-5e449b1cbfb4', 'PWD': '/home/neomelt/sentry_decision/build/rm_decision_cpp', 'LESS_TERMCAP_me': '\x1b[0m', 'LC_ALL': 'en_US.UTF-8', 'LC_NUMERIC': 'zh_CN.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_PAPER': 'zh_CN.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[4.487781] (rm_decision_cpp) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.488559] (rm_decision_cpp) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[4.489117] (rm_decision_cpp) StdoutLine: {'line': b'-- Symlinking: /home/neomelt/sentry_decision/install/rm_decision_cpp/lib/librm_decision_cpp.so\n'}
+[4.491505] (rm_decision_cpp) StdoutLine: {'line': b'-- Symlinking: /home/neomelt/sentry_decision/install/rm_decision_cpp/lib/rm_decision_cpp/tree_exec_node\n'}
+[4.494745] (rm_decision_cpp) StdoutLine: {'line': b'-- Symlinking: /home/neomelt/sentry_decision/install/rm_decision_cpp/include/sentry_decision/send_goal.hpp\n'}
+[4.497419] (rm_decision_cpp) StdoutLine: {'line': b'-- Symlinking: /home/neomelt/sentry_decision/install/rm_decision_cpp/include/sentry_decision/spin.hpp\n'}
+[4.499867] (rm_decision_cpp) StdoutLine: {'line': b'-- Symlinking: /home/neomelt/sentry_decision/install/rm_decision_cpp/share/ament_index/resource_index/package_run_dependencies/rm_decision_cpp\n'}
+[4.501327] (rm_decision_cpp) StdoutLine: {'line': b'-- Symlinking: /home/neomelt/sentry_decision/install/rm_decision_cpp/share/ament_index/resource_index/parent_prefix_path/rm_decision_cpp\n'}
+[4.503511] (rm_decision_cpp) StdoutLine: {'line': b'-- Symlinking: /home/neomelt/sentry_decision/install/rm_decision_cpp/share/rm_decision_cpp/environment/ament_prefix_path.sh\n'}
+[4.506715] (rm_decision_cpp) StdoutLine: {'line': b'-- Symlinking: /home/neomelt/sentry_decision/install/rm_decision_cpp/share/rm_decision_cpp/environment/ament_prefix_path.dsv\n'}
+[4.509329] (rm_decision_cpp) StdoutLine: {'line': b'-- Symlinking: /home/neomelt/sentry_decision/install/rm_decision_cpp/share/rm_decision_cpp/environment/path.sh\n'}
+[4.510789] (-) TimerEvent: {}
+[4.511073] (rm_decision_cpp) StdoutLine: {'line': b'-- Symlinking: /home/neomelt/sentry_decision/install/rm_decision_cpp/share/rm_decision_cpp/environment/path.dsv\n'}
+[4.513025] (rm_decision_cpp) StdoutLine: {'line': b'-- Symlinking: /home/neomelt/sentry_decision/install/rm_decision_cpp/share/rm_decision_cpp/local_setup.bash\n'}
+[4.515294] (rm_decision_cpp) StdoutLine: {'line': b'-- Symlinking: /home/neomelt/sentry_decision/install/rm_decision_cpp/share/rm_decision_cpp/local_setup.sh\n'}
+[4.517840] (rm_decision_cpp) StdoutLine: {'line': b'-- Symlinking: /home/neomelt/sentry_decision/install/rm_decision_cpp/share/rm_decision_cpp/local_setup.zsh\n'}
+[4.522582] (rm_decision_cpp) StdoutLine: {'line': b'-- Symlinking: /home/neomelt/sentry_decision/install/rm_decision_cpp/share/rm_decision_cpp/local_setup.dsv\n'}
+[4.524419] (rm_decision_cpp) StdoutLine: {'line': b'-- Symlinking: /home/neomelt/sentry_decision/install/rm_decision_cpp/share/rm_decision_cpp/package.dsv\n'}
+[4.526165] (rm_decision_cpp) StdoutLine: {'line': b'-- Symlinking: /home/neomelt/sentry_decision/install/rm_decision_cpp/share/ament_index/resource_index/packages/rm_decision_cpp\n'}
+[4.528602] (rm_decision_cpp) StdoutLine: {'line': b'-- Symlinking: /home/neomelt/sentry_decision/install/rm_decision_cpp/share/rm_decision_cpp/cmake/rm_decision_cppConfig.cmake\n'}
+[4.531032] (rm_decision_cpp) StdoutLine: {'line': b'-- Symlinking: /home/neomelt/sentry_decision/install/rm_decision_cpp/share/rm_decision_cpp/cmake/rm_decision_cppConfig-version.cmake\n'}
+[4.533161] (rm_decision_cpp) StdoutLine: {'line': b'-- Symlinking: /home/neomelt/sentry_decision/install/rm_decision_cpp/share/rm_decision_cpp/package.xml\n'}
+[4.537011] (rm_decision_cpp) CommandEnded: {'returncode': 0}
+[4.549167] (rm_decision_cpp) JobEnded: {'identifier': 'rm_decision_cpp', 'rc': 0}
+[4.549850] (-) EventReactorShutdown: {}
