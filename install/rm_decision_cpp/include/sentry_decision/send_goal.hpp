@@ -1,1 +1,0 @@
-/home/neomelt/sentry_decision/include/sentry_decision/send_goal.hpp

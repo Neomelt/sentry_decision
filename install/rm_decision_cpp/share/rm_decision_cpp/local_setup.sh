@@ -1,1 +1,0 @@
-/home/neomelt/sentry_decision/build/rm_decision_cpp/ament_cmake_environment_hooks/local_setup.sh
