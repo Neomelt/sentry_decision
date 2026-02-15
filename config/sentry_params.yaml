@@ -1,0 +1,14 @@
+# 哨兵决策参数配置
+sentry_decision_node:
+  ros__parameters:
+    # 行为树 XML 文件路径（由 launch 文件注入，一般不需要在这里改）
+    # bt_xml_file: ""
+
+    # 行为树 tick 频率 (Hz)
+    tick_rate: 100.0
+
+    # 攻击距离 (m)：和目标保持的距离
+    attack_distance: 2.0
+
+    # 停止小陀螺的坡度阈值 (度)
+    stop_spin_slope_degree_thre: 14.0

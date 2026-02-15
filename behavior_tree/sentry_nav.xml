@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4">
+  <BehaviorTree ID="SentryNavigation">
+    <ReactiveSequence>
+      <!-- ========== 持续更新黑板数据 ========== -->
+      <Topics2Blackboard target_armor_id="{target_armor_id}"
+                         tracking="{tracking}"
+                         projectile_allowance_17mm="{projectile_allowance_17mm}"
+                         enemy_outpost_hp="{enemy_outpost_hp}"
+                         my_base_hp="{my_base_hp}"
+                         my_outpost_hp="{my_outpost_hp}"
+                         armor_id="{armor_id}"
+                         target_position="{target_position}"
+                         enemy_base_hp="{enemy_base_hp}"
+                         hurt_type="{hurt_type}"
+                         stage_remain_time="{stage_remain_time}"
+                         game_progress="{game_progress}"
+                         current_hp="{current_hp}"/>
+
+      <!-- ========== 优先级决策（仅在比赛进行中, game_progress==4）========== -->
+      <ReactiveFallback _while="game_progress==4">
+
+        <!-- ===== 1. 死亡：停止移动 ===== -->
+        <ChassisTypePublisher chassis_cmd="2"
+                              _while="current_hp==0"/>
+
+        <!-- ===== 2. 低血量或低弹量：回血点补给（基地血量低时更积极回血）===== -->
+        <SequenceWithMemory>
+          <ScriptCondition code="my_base_hp&lt;2001 &amp;&amp; (current_hp&lt;155||projectile_allowance_17mm&lt;16)"/>
+          <Sequence>
+            <ChassisTypePublisher chassis_cmd="2"/>
+            <!-- 回血点坐标（25UC蓝方），修改坐标请直接改数字 -->
+            <Nav2Pose goal="-2.10,-5.88,0.0,0.0,0.0,0.0,1.0"/>
+            <RetryUntilSuccessful num_attempts="10000">
+              <ScriptCondition code="current_hp&gt;399 &amp;&amp; projectile_allowance_17mm&gt;99"/>
+            </RetryUntilSuccessful>
+          </Sequence>
+        </SequenceWithMemory>
+
+        <SequenceWithMemory>
+          <ScriptCondition code="my_base_hp&gt;2000 &amp;&amp; (current_hp&lt;275||projectile_allowance_17mm&lt;16)"/>
+          <Sequence>
+            <ChassisTypePublisher chassis_cmd="2"/>
+            <Nav2Pose goal="-2.10,-5.88,0.0,0.0,0.0,0.0,1.0"/>
+            <RetryUntilSuccessful num_attempts="10000">
+              <ScriptCondition code="current_hp&gt;399 &amp;&amp; projectile_allowance_17mm&gt;99"/>
+            </RetryUntilSuccessful>
+          </Sequence>
+        </SequenceWithMemory>
+
+        <!-- ===== 3. 基地受威胁：回防巡逻 ===== -->
+        <Sequence _while="my_base_hp&lt;2001">
+          <Delay delay_msec="10">
+            <ChassisTypePublisher chassis_cmd="2"/>
+          </Delay>
+          <!-- 基地附近巡逻点（25UC蓝方） -->
+          <Nav2Pose goal="0.4,0.65,0.0,0.0,0.0,0.0,1.0"/>
+          <Sleep msec="1000"/>
+          <Nav2Pose goal="-2.6,0.7,0.0,0.0,0.0,0.0,1.0"/>
+          <Sleep msec="1000"/>
+        </Sequence>
+
+        <!-- ===== 4. 前哨站存活：攻击前哨 ===== -->
+        <Sequence _while="enemy_outpost_hp&gt;0">
+          <Delay delay_msec="10">
+            <Nav2Pose goal="10.2,1.7,0.0,0.0,0.0,0.0,1.0"/>
+          </Delay>
+          <!-- 到达前哨附近后开启小陀螺，修改底盘模式数字即可 -->
+          <ChassisTypePublisher chassis_cmd="1"/>
+        </Sequence>
+
+        <!-- ===== 5. 追踪到敌人：追击攻击 ===== -->
+        <ReactiveSequence name="ATTACK"
+                          _while="enemy_outpost_hp==0 &amp;&amp; tracking==true">
+          <Attack name="Calculate Attack Pose"
+                  attack_pose="{attack_pose}"
+                  target_position="{target_position}"/>
+          <!-- 限制追击区域（25UC蓝方），修改坐标即可 -->
+          <IsInPosition p1="14.4,1.4,0.0,0.0,0.0,0.0,1.0"
+                        p2="14.4,-8.5,0.0,0.0,0.0,0.0,1.0"
+                        p3="4.5,-8.5,0.0,0.0,0.0,0.0,1.0"
+                        p4="4.5,1.4,0.0,0.0,0.0,0.0,1.0">
+            <Nav2Pose goal="{attack_pose}"/>
+          </IsInPosition>
+        </ReactiveSequence>
+
+        <!-- ===== 6. 默认：巡逻模式 ===== -->
+        <Sequence _while="enemy_outpost_hp==0">
+          <Delay delay_msec="10">
+            <ChassisTypePublisher chassis_cmd="2"/>
+          </Delay>
+          <!-- 巡逻路径点（25UC蓝方），修改坐标即可 -->
+          <Nav2Pose goal="12.6,-0.7,0.0,0.0,0.0,0.0,1.0"/>
+          <Sleep msec="1000"/>
+          <Nav2Pose goal="11.1,-3.7,0.0,0.0,0.0,0.0,1.0"/>
+          <Sleep msec="1000"/>
+          <Nav2Pose goal="9.1,-3.4,0.0,0.0,0.0,0.0,1.0"/>
+          <Sleep msec="1000"/>
+          <Nav2Pose goal="11.1,-3.7,0.0,0.0,0.0,0.0,1.0"/>
+          <Sleep msec="1000"/>
+        </Sequence>
+
+      </ReactiveFallback>
+      
+      <!-- 防止行为树瞬间结束导致 Groot2 闪烁，添加延时 -->
+      <Sleep msec="1000"/>
+    </ReactiveSequence>
+  </BehaviorTree>
+
+  <!-- ========== 节点模型定义 (用于 Groot 可视化编辑) ========== -->
+  <TreeNodesModel>
+    <Action ID="Attack">
+      <output_port name="attack_pose"
+                   type="geometry_msgs::msg::PoseStamped"/>
+      <input_port name="target_position"
+                  type="geometry_msgs::msg::PoseStamped"/>
+    </Action>
+    <Action ID="ChassisTypePublisher">
+      <input_port name="chassis_cmd"
+                  type="signed char">底盘模式编号 (直接改数字即可)</input_port>
+    </Action>
+    <Decorator ID="IsInPosition">
+      <input_port name="p1" type="geometry_msgs::msg::PoseStamped"/>
+      <input_port name="p2" type="geometry_msgs::msg::PoseStamped"/>
+      <input_port name="p3" type="geometry_msgs::msg::PoseStamped"/>
+      <input_port name="p4" type="geometry_msgs::msg::PoseStamped"/>
+    </Decorator>
+    <Action ID="Nav2Pose">
+      <input_port name="goal"
+                  type="geometry_msgs::msg::PoseStamped">导航目标点</input_port>
+    </Action>
+    <Action ID="Topics2Blackboard">
+      <output_port name="target_armor_id" type="std::string"/>
+      <output_port name="tracking" type="bool"/>
+      <output_port name="projectile_allowance_17mm" type="unsigned short"/>
+      <output_port name="enemy_outpost_hp" type="unsigned short"/>
+      <output_port name="my_base_hp" type="unsigned short"/>
+      <output_port name="my_outpost_hp" type="unsigned short"/>
+      <output_port name="armor_id" type="unsigned char"/>
+      <output_port name="target_position" type="geometry_msgs::msg::PoseStamped"/>
+      <output_port name="enemy_base_hp" type="unsigned short"/>
+      <output_port name="hurt_type" type="unsigned char"/>
+      <output_port name="stage_remain_time" type="unsigned short"/>
+      <output_port name="game_progress" type="unsigned char"/>
+      <output_port name="current_hp" type="unsigned short"/>
+    </Action>
+  </TreeNodesModel>
+
+</root>

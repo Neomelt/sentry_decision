@@ -4,7 +4,7 @@
   <name>rm_decision_cpp</name>
   <version>0.0.0</version>
   <author email="1367256900@qq.com">Polaris Xia</author>
-  <description>TODO: Package description</description>
+  <description>RoboMaster 哨兵决策行为树</description>
   <maintainer email="1367256900@qq.com">PolarisXQ</maintainer>
   <license>Apache-2.0</license>
 
@@ -13,20 +13,21 @@
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
   <test_depend>ament_cmake_gtest</test_depend>
-  
+
   <depend>rclcpp</depend>
+  <depend>rclcpp_action</depend>
   <depend>std_msgs</depend>
   <depend>geometry_msgs</depend>
   <depend>nav2_msgs</depend>
   <depend>behaviortree_cpp</depend>
+  <depend>sensor_msgs</depend>
   <depend>tf2</depend>
   <depend>tf2_ros</depend>
   <depend>tf2_geometry_msgs</depend>
-  <!-- <depend>rm_interfaces</depend>
-  <depend>auto_aim_interfaces</depend> -->
+  <depend>visualization_msgs</depend>
+
   <export>
     <build_type>ament_cmake</build_type>
   </export>
 
-  
 </package>

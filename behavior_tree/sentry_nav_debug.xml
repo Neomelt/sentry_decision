@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4">
+  <BehaviorTree ID="SentryNavigationDebug">
+    <ReactiveSequence>
+      <!-- 1. 更新黑板 -->
+      <Topics2Blackboard target_armor_id="{target_armor_id}"
+                         tracking="{tracking}"
+                         projectile_allowance_17mm="{projectile_allowance_17mm}"
+                         enemy_outpost_hp="{enemy_outpost_hp}"
+                         my_base_hp="{my_base_hp}"
+                         my_outpost_hp="{my_outpost_hp}"
+                         armor_id="{armor_id}"
+                         target_position="{target_position}"
+                         enemy_base_hp="{enemy_base_hp}"
+                         hurt_type="{hurt_type}"
+                         stage_remain_time="{stage_remain_time}"
+                         game_progress="{game_progress}"
+                         current_hp="{current_hp}"/>
+
+      <!-- 2. 简单巡逻 (调试用，仅保留不到10个节点) -->
+      <Sequence>
+        <Nav2Pose goal="0.0,0.0,0.0,0.0,0.0,0.0,1.0"/>
+        <Sleep msec="2000"/>
+        <Nav2Pose goal="1.0,0.0,0.0,0.0,0.0,0.0,1.0"/>
+        <Sleep msec="2000"/>
+      </Sequence>
+
+      <Sleep msec="100"/>
+    </ReactiveSequence>
+  </BehaviorTree>
+
+  <!-- 模型定义 -->
+  <TreeNodesModel>
+    <Action ID="Nav2Pose">
+      <input_port name="goal" type="geometry_msgs::msg::PoseStamped"/>
+    </Action>
+    <Action ID="Topics2Blackboard">
+       <output_port name="target_armor_id" type="std::string"/>
+       <output_port name="tracking" type="bool"/>
+       <output_port name="projectile_allowance_17mm" type="unsigned short"/>
+       <output_port name="enemy_outpost_hp" type="unsigned short"/>
+       <output_port name="my_base_hp" type="unsigned short"/>
+       <output_port name="my_outpost_hp" type="unsigned short"/>
+       <output_port name="armor_id" type="unsigned char"/>
+       <output_port name="target_position" type="geometry_msgs::msg::PoseStamped"/>
+       <output_port name="enemy_base_hp" type="unsigned short"/>
+       <output_port name="hurt_type" type="unsigned char"/>
+       <output_port name="stage_remain_time" type="unsigned short"/>
+       <output_port name="game_progress" type="unsigned char"/>
+       <output_port name="current_hp" type="unsigned short"/>
+    </Action>
+  </TreeNodesModel>
+</root>
